@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dunhe0h6ogubs"]
+
+[ext_resource type="Texture2D" uid="uid://78bbs05oeqwb" path="res://icon.svg" id="1_dlmty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfxs2"]
+size = Vector2(112, 112)
+
+[node name="boss" type="CharacterBody2D" unique_id=12582126]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=718893992]
+texture = ExtResource("1_dlmty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864400062]
+shape = SubResource("RectangleShape2D_kfxs2")
+
+[node name="Timer" type="Timer" parent="." unique_id=1289170562]
+wait_time = 4.0
+autostart = true
