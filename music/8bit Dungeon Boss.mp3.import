@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjctrfqslcrug"
+path="res://.godot/imported/8bit Dungeon Boss.mp3-6c0f9a00fb92b6b1a7f6802da17c00ed.mp3str"
+
+[deps]
+
+source_file="res://music/8bit Dungeon Boss.mp3"
+dest_files=["res://.godot/imported/8bit Dungeon Boss.mp3-6c0f9a00fb92b6b1a7f6802da17c00ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
