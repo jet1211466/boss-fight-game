@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cfjr13vj1vfqw"]
+
+[node name="bossfight" type="Node2D" unique_id=463273865]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=368780063]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=385537458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1070349243]
