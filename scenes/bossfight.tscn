@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bl1j6p8m5t3c5" path="res://scenes/player.tscn" id="1_xmt2e"]
 [ext_resource type="AudioStream" uid="uid://cjctrfqslcrug" path="res://music/8bit Dungeon Boss.mp3" id="2_jiv1s"]
 [ext_resource type="PackedScene" uid="uid://dunhe0h6ogubs" path="res://scenes/boss.tscn" id="3_mueyb"]
-[ext_resource type="Script" uid="uid://r6k1h5b25esi" path="res://scripts/boss.gd" id="4_wrs2e"]
 
 [node name="bossfight" type="Node2D" unique_id=463273865]
 
@@ -16,5 +15,4 @@ volume_db = -6.117
 autoplay = true
 
 [node name="boss" parent="." unique_id=12582126 instance=ExtResource("3_mueyb")]
-position = Vector2(560, 232)
-script = ExtResource("4_wrs2e")
+position = Vector2(576, 184)
