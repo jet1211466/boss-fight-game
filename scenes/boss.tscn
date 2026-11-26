@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://78bbs05oeqwb" path="res://icon.svg" id="1_dlmty"]
 [ext_resource type="Script" uid="uid://r6k1h5b25esi" path="res://scripts/boss.gd" id="1_neq0i"]
+[ext_resource type="Texture2D" uid="uid://bxj5fjy2r6tx" path="res://sprites/warningbeam.png" id="3_jncid"]
+[ext_resource type="Script" uid="uid://u6un387krrdu" path="res://scripts/warning_beam.gd" id="4_qnbj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfxs2"]
 size = Vector2(112, 112)
@@ -9,13 +11,20 @@ size = Vector2(112, 112)
 [node name="boss" type="CharacterBody2D" unique_id=12582126]
 script = ExtResource("1_neq0i")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=718893992]
+[node name="bossSprite" type="Sprite2D" parent="." unique_id=718893992]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_dlmty")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864400062]
+[node name="bossCollision" type="CollisionShape2D" parent="." unique_id=1864400062]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kfxs2")
+
+[node name="warningBeam" type="Sprite2D" parent="." unique_id=652178320]
+visible = false
+modulate = Color(1, 1, 1, 0.6117647)
+scale = Vector2(6, 6)
+texture = ExtResource("3_jncid")
+script = ExtResource("4_qnbj4")
 
 [node name="Timer" type="Timer" parent="." unique_id=1289170562]
 wait_time = 4.0

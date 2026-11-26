@@ -33,19 +33,25 @@ func leftBlade():
 	print("left blade")
 	var blade = BLADE.instantiate()
 	get_tree().current_scene.add_child(blade)
-	blade.global_position = global_position + Vector2(250, 0)
+	blade.global_position = global_position + Vector2(250, 0) - Vector2(0, 350)
+	$warningBeam.beamAnimation()
+	$warningBeam.global_position = global_position + Vector2(250, 100)
 	
 func rightBlade():
 	print("right blade")
 	var blade = BLADE.instantiate()
 	get_tree().current_scene.add_child(blade)
-	blade.global_position = global_position + Vector2(900, 0)
+	blade.global_position = global_position - Vector2(250, 350)
+	$warningBeam.beamAnimation()
+	$warningBeam.global_position = global_position - Vector2(250, 0) + Vector2(0, 100)
 	
 func middleBlade():
 	print("middle blade")
 	var blade = BLADE.instantiate()
 	get_tree().current_scene.add_child(blade)
-	blade.global_position = global_position
+	blade.global_position = global_position - Vector2(0, 350) 
+	$warningBeam.beamAnimation()
+	$warningBeam.global_position = global_position + Vector2(0, 100)
 	
 func bladeRain():
 	print("blade rain")
@@ -56,4 +62,4 @@ func rest():
 		pass
 	else:
 		var tween = create_tween()
-		tween.tween_property(self, "position", Vector2(576.0, 184.0), 1)
+		tween.tween_property(self, "position", Vector2(576.0, 184.0), 0.5)

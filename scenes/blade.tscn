@@ -15,3 +15,7 @@ texture = ExtResource("1_dhxgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=806643204]
 shape = SubResource("RectangleShape2D_kfxs2")
+
+[node name="Timer" type="Timer" parent="." unique_id=1126516754]
+one_shot = true
+autostart = true
