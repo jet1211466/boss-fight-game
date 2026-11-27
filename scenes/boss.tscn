@@ -27,8 +27,9 @@ texture = ExtResource("3_jncid")
 script = ExtResource("4_qnbj4")
 
 [node name="bossAttackTimer" type="Timer" parent="." unique_id=1289170562]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [node name="bossMovementTimer" type="Timer" parent="." unique_id=1823280866]
+wait_time = 2.0
 one_shot = true
