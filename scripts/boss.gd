@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name boss
 
 const BLADE = preload("res://scenes/blade.tscn")
 
