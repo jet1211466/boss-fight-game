@@ -1,11 +1,13 @@
 extends CharacterBody2D
-
+class_name Player
+signal healthChanged
 
 const SPEED = 300.0
 @onready var boss = $"../boss"
 @onready var floppaSound = $burenyuu
 @onready var gunCooldown = $gunCooldown
 var bullet = preload("res://scenes/bullet.tscn")
+var currentHealth = 100
 
 
 func _physics_process(_delta: float) -> void:
@@ -29,3 +31,7 @@ func shootBullet():
 	newBullet.global_position = global_position
 	newBullet.direction = global_position.direction_to(boss.global_position)
 	get_tree().current_scene.add_child(newBullet)
+	
+	
+func hurt():
+	healthChanged.emit()

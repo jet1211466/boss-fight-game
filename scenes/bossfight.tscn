@@ -4,6 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://bl1j6p8m5t3c5" path="res://scenes/player.tscn" id="1_xmt2e"]
 [ext_resource type="AudioStream" uid="uid://cjctrfqslcrug" path="res://music/8bit Dungeon Boss.mp3" id="2_jiv1s"]
 [ext_resource type="PackedScene" uid="uid://dunhe0h6ogubs" path="res://scenes/boss.tscn" id="3_mueyb"]
+[ext_resource type="Script" uid="uid://cslexe15r4vss" path="res://scripts/progress_bar.gd" id="5_byl7a"]
+[ext_resource type="Script" uid="uid://3df6pi1j4xlv" path="res://scripts/player_health_bar.gd" id="7_3o5e3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s17tx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s17tx"]
+bg_color = Color(2.0696223e-06, 0.71370023, 0.14726537, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq7qv"]
+bg_color = Color(0.74886566, 0, 0.09611628, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbf06"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3o5e3"]
 
 [node name="bossfight" type="Node2D" unique_id=463273865]
 
@@ -23,3 +38,49 @@ autoplay = true
 
 [node name="boss" parent="." unique_id=12582126 instance=ExtResource("3_mueyb")]
 position = Vector2(576, 184)
+
+[node name="bossHealthBar" type="ProgressBar" parent="." unique_id=945068634]
+offset_left = 256.0
+offset_top = 16.0
+offset_right = 896.0
+offset_bottom = 64.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_s17tx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s17tx")
+value = 100.0
+show_percentage = false
+script = ExtResource("5_byl7a")
+
+[node name="animationBar" type="ProgressBar" parent="bossHealthBar" unique_id=746803196]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 48.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pq7qv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wbf06")
+show_percentage = false
+
+[node name="Label" type="Label" parent="bossHealthBar" unique_id=1596483653]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 48.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playerHealthBar" type="ProgressBar" parent="." unique_id=1789070934]
+offset_left = 24.0
+offset_top = 576.0
+offset_right = 392.0
+offset_bottom = 624.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_3o5e3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s17tx")
+value = 100.0
+script = ExtResource("7_3o5e3")
+
+[node name="animationBar" type="ProgressBar" parent="playerHealthBar" unique_id=210818999]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 368.0
+offset_bottom = 48.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pq7qv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wbf06")
+show_percentage = false

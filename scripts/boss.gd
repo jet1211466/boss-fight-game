@@ -1,8 +1,10 @@
 extends CharacterBody2D
 class_name boss
+signal healthChanged
 
 const BLADE = preload("res://scenes/blade.tscn")
 @onready var hurtSquare = $hurtSquare
+var currentHealth = 500
 
 func _ready() -> void:
 	$bossAttackTimer.timeout.connect(onTimerTimeout)
@@ -11,7 +13,8 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
-func hurtFlash():
+func hurt():
+	healthChanged.emit()
 	hurtSquare.flash()
 
 func onTimerTimeout() -> void:

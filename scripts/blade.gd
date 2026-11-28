@@ -12,3 +12,9 @@ func goDown():
 
 func _process(delta: float) -> void:
 	rotate(delta * 10.0)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.currentHealth -= 10
+		body.hurt()
