@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dunhe0h6ogubs"]
 
-[ext_resource type="Texture2D" uid="uid://78bbs05oeqwb" path="res://icon.svg" id="1_dlmty"]
 [ext_resource type="Script" uid="uid://r6k1h5b25esi" path="res://scripts/boss.gd" id="1_neq0i"]
+[ext_resource type="Texture2D" uid="uid://dnlhlktn18v1m" path="res://sprites/angrycat.jpg" id="2_qnbj4"]
 [ext_resource type="Texture2D" uid="uid://bxj5fjy2r6tx" path="res://sprites/warningbeam.png" id="3_jncid"]
 [ext_resource type="Script" uid="uid://u6un387krrdu" path="res://scripts/warning_beam.gd" id="4_qnbj4"]
 
@@ -12,8 +12,9 @@ size = Vector2(112, 112)
 script = ExtResource("1_neq0i")
 
 [node name="bossSprite" type="Sprite2D" parent="." unique_id=718893992]
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_dlmty")
+position = Vector2(1.5258789e-05, 0)
+scale = Vector2(0.35341367, 0.35341364)
+texture = ExtResource("2_qnbj4")
 
 [node name="bossCollision" type="CollisionShape2D" parent="." unique_id=1864400062]
 scale = Vector2(1.5, 1.5)

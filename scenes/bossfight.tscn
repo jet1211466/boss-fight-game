@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://cfjr13vj1vfqw"]
 
+[ext_resource type="Texture2D" uid="uid://ut2dxavyv4ol" path="res://sprites/matvey.jpg" id="1_wrs2e"]
 [ext_resource type="PackedScene" uid="uid://bl1j6p8m5t3c5" path="res://scenes/player.tscn" id="1_xmt2e"]
 [ext_resource type="AudioStream" uid="uid://cjctrfqslcrug" path="res://music/8bit Dungeon Boss.mp3" id="2_jiv1s"]
 [ext_resource type="PackedScene" uid="uid://dunhe0h6ogubs" path="res://scenes/boss.tscn" id="3_mueyb"]
 
 [node name="bossfight" type="Node2D" unique_id=463273865]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1490261330]
+position = Vector2(576, 338)
+scale = Vector2(4.933334, 2.8500001)
+texture = ExtResource("1_wrs2e")
 
 [node name="player" parent="." unique_id=38956447 instance=ExtResource("1_xmt2e")]
 position = Vector2(592, 536)
