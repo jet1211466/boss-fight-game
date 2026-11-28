@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4dvtpf64saoq"]
 
 [ext_resource type="Script" uid="uid://bfrcgbt3fp7hh" path="res://scripts/bullet.gd" id="1_mkf8s"]
-[ext_resource type="Texture2D" uid="uid://78bbs05oeqwb" path="res://icon.svg" id="2_y25gk"]
+[ext_resource type="Texture2D" uid="uid://cl5hgb7usucju" path="res://sprites/floppa.jpg" id="2_y25gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkf8s"]
 size = Vector2(32, 32)
@@ -10,7 +10,7 @@ size = Vector2(32, 32)
 script = ExtResource("1_mkf8s")
 
 [node name="bulletSprite" type="Sprite2D" parent="." unique_id=1257871655]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.128, 0.128)
 texture = ExtResource("2_y25gk")
 
 [node name="bulletCollision" type="CollisionShape2D" parent="." unique_id=1934035350]

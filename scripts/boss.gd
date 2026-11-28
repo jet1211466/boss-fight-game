@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name boss
 
 const BLADE = preload("res://scenes/blade.tscn")
-
+@onready var hurtSquare = $hurtSquare
 
 func _ready() -> void:
 	$bossAttackTimer.timeout.connect(onTimerTimeout)
@@ -11,6 +11,8 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
+func hurtFlash():
+	hurtSquare.flash()
 
 func onTimerTimeout() -> void:
 	print("timer fired")

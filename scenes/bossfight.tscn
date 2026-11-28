@@ -8,6 +8,7 @@
 [node name="bossfight" type="Node2D" unique_id=463273865]
 
 [node name="background" type="Sprite2D" parent="." unique_id=1490261330]
+visible = false
 position = Vector2(576, 338)
 scale = Vector2(4.933334, 2.8500001)
 texture = ExtResource("1_wrs2e")
